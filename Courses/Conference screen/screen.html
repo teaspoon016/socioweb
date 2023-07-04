@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" href="config.js">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/6668fb94e4.js" crossorigin="anonymous"></script>
+    </head>
+
+  <body>
+    <div id="join-screen">
+      <!-- Create new Meeting Button -->
+      <button id="createMeetingBtn">New Meeting</button>
+      OR
+      <!-- Join existing Meeting -->
+      <input class="btn-primary" type="text" id="meetingIdTxt" placeholder="Enter Meeting id" />
+      <button id="joinBtn">Join Meeting</button>
+    </div>
+
+    <!-- for Managing meeting status -->
+    <div id="textDiv"></div>
+
+    <div id="grid-screen" style="display: none">
+      <!-- To Display MeetingId -->
+      <h3 id="meetingIdHeading"></h3>
+
+      
+      <!-- render Video -->
+      <div class="row" id="videoContainer"></div>
+
+      <!-- Controllers -->
+      <button id="leaveBtn"><i class="fa-solid fa-phone"></i></button>
+      <button style="size: 100px;" id="toggleMicBtn"><i class="fa-solid fa-microphone-slash"></i></button>
+      <button id="toggleWebCamBtn"><i class="fa-solid fa-camera-web"></i></button>
+
+
+    </div>
+
+    <!-- Add VideoSDK script -->
+    <script src="https://sdk.videosdk.live/js-sdk/0.0.67/videosdk.js"></script>
+    <script src="config.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
