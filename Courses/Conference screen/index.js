@@ -104,6 +104,7 @@ function initializeMeeting() {
             videoContainer.appendChild(videoElement);
             videoContainer.appendChild(audioElement);
           });
+          
   
           meeting.on("participant-left", (participant) => {
             let vElement = document.getElementById(`f-${participant.id}`);
