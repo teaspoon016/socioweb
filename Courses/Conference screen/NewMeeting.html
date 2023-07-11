@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6668fb94e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav-content">
+        <img src="./images/Mask group.svg" alt="" />
+       <div style="display: flex;"> <h2 style="color: white;">Socio</h2><h2 style="color: #ffbc3b ;">web</h2></div>
+      </div>
+    </nav>
+    <!-- for Managing meeting status -->
+    <div class="textDiv"></div>
+
+    <div class="grid-screen">
+      <!-- To Display MeetingId -->
+      <h3 class="meetingIdHeading"></h3>
+
+      <!-- render Video -->
+      <div class="row videoContainer"></div>
+
+      <!-- Controllers -->
+      <div class="video-footer">
+        <div class="action-menu">
+          <div class="action-buttons">
+            <button style="size: 100px" class="toggleMicBtn">
+                <img class="video-btn-images" src="./images/Group 40.svg" alt="" />
+              </button>
+              <button class="toggleWebCamBtn">
+                <img class="video-btn-images" src="./images/Group 39.svg" alt="" />
+              </button>
+              <button class="chatBtn">
+                <img class="video-btn-images" src="./images/Group 38.svg" alt="" />
+              </button>
+          </div>
+        </div>
+        <button class="leaveBtn">End call</button>
+      </div>
+    </div>
+    <!-- Add VideoSDK script -->
+    <script src="https://sdk.videosdk.live/js-sdk/0.0.67/videosdk.js"></script>
+    <script src="config.js"></script>
+    <script src="newMeeting.js"></script>
+  </body>
+</html>
