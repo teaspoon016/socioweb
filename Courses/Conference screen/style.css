@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@font-face {
+  font-family: "futura-bold";
+  src: url("../fonts/Futura-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  color: #5c5c77;
+  background: #f1f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+p,
+.paragraph {
+  font-weight: 400;
+  color: #5c5c77;
+  font-size: 15px;
+  line-height: 1.9;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "futura-bold";
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+.h1 {
+  font-size: 60px;
+}
+.textDiv{
+    width: fit-content;
+    margin: auto;
+}
+.grid-screen {
+  width: 100%;
+  padding: 10px;
+}
+.join-screen {
+  width: fit-content;
+  margin: auto;
+  align-self: center;
+}
+.join-screen > button {
+  border: 0px;
+  border-radius: 4px;
+  background-color: orange;
+  padding: 8px;
+  cursor: pointer;
+}
+.join-screen > input {
+  border-radius: 4px;
+  padding: 8px;
+}
+.infoDiv {
+  margin: auto;
+  background: white;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 6px;
+  z-index: 2;
+}
+.modalOpen {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  border: 0px;
+}
+.nav {
+  background-color: #1a1a37;
+  width: 100%;
+}
+.nav-content h2 {
+  margin: auto;
+  padding-top: 5px;
+  text-align: center;
+}
+.nav-content {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  gap: 25px;
+  color: white;
+}
+
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  gap: 15px;
+}
+.videoContainer>.video-frame{
+  width: 100%;
+}
+.videoContainer > .video-frame > video {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  border-radius: 10px
+}
+.videoContainer>.video-frame>.displayName{
+    top: 83%;
+    left: 2%;
+}
+.loading {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.small-participant-div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 50%;
+}
+
+.participantDiv {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.video-frame {
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.participantDiv > .video-frame video {
+  width: 100%;
+  border-radius: 10px;
+}
+.participantDiv > .video-frame {
+  width: fit-content;
+}
+.video-frame h1 {
+  width: fit-content;
+}
+.video-frame div {
+  width: fit-content;
+}
+.video-frame.active {
+  flex-grow: 1;
+}
+
+.active {
+  width: 500px;
+}
+.displayName {
+  background: black;
+  opacity: 0.6;
+  padding: 10px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  position: absolute;
+  left: 5%;
+  top: 75%;
+  color: white;
+}
+.video-footer {
+  height: 70px;
+  display: flex;
+  background: white;
+  padding: 13px;
+  position: fixed;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  bottom: 0;
+}
+.action-menu {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+.toggleMicBtn,
+.toggleWebCamBtn,
+.chatBtn {
+  padding: 1px;
+  background: white;
+  border-width: 0px;
+  width: 40px;
+  height: 40px;
+}
+.action-buttons {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  gap: 15px;
+}
+
+.video-btn-images {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.leaveBtn {
+  margin:auto;
+  margin-right: 0;
+  background: #eb5757;
+  color: white;
+  border-radius: 25px;
+  height: 35px;
+  padding: 10px;
+  width: 80px;
+  border-width: 0px;
+  position: relative;
+}
+.noVideo{
+  background-color: black;
+  background-image: url(./images/video-off-svgrepo-com.svg);
+  background-position: center;
+  background-size: contain;
+}
+@media  (max-width: 575px) {
+  h1,
+  .h1 {
+    font-size: 45px;
+  }
+  video {
+    width: 100%;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 40px;
+}
+
+
+@media  (max-width:1200px) {
+
+  .videoContainer>.video-frame>video{
+        width: 100%;
+    }
+    .videoContainer *{
+      margin: 0px;
+    }
+}
+@media  (max-width:950px) {
+  .videoContainer {
+    padding: 7px;
+  }
+
+  .participantDiv >.video-frame video{
+    width: 70%;
+    height: 150%;
+  }
+    .videoContainer>.video-frame video{
+        width: 100%;
+    }
+    .videoContainer *{
+        margin: 0px;
+    }
+}
+@media  (max-width: 764px) {
+  .participantDiv >.video-frame video{
+    width: 100%;
+    height: 150%;
+  }
+  .participantDiv >.video-frame{
+    width: 50%;
+  }
+    .videoContainer>.video-frame video{
+        width: 100%;
+    }
+    .video-frame{
+        width: 100%;
+    }
+  .videoContainer > .video-frame > video {
+    height: 35vh;
+  }
+
+}
+@media  (max-width: 575px) {
+  h2,
+  .h2 {
+    font-size: 30px;
+  }
+}
+@media  (max-width: 500px) {
+  .action-menu{
+    position: relative;
+    width: 90%;
+  }
+  .leaveBtn{
+    height: fit-content;
+    margin: auto;
+  }
+  .grid-screen,.videoContainer{
+    padding: 2px;
+  }
+  .displayName{
+    top: 65%;
+    font-size: smaller;
+    padding: 5px;
+  }
+
+  .participantDiv {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-row: auto;
+  }
+  .participantDiv > .video-frame {
+    width: 100%;
+  }
+  .participantDiv >.video-frame video{
+    width: 100%;
+  }
+  .participantDiv >.video-frame{
+    width: 100%;
+  }
+    .videoContainer>.video-frame video{
+        width: 100%;
+        height: 30vh;
+    }
+}
+
+
