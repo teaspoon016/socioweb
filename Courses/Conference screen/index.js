@@ -1,7 +1,7 @@
 // Getting Elements from DOM
 const joinButton = document.querySelector(".joinBtn");
 const createButton = document.querySelector(".createMeetingBtn");
-const conference =document.querySelector(".conference");
+const conference =document.querySelectorAll(".conference");
 const dialog = document.querySelector(".Dialog");
 const form =document.querySelector(".infoDiv");
 const input = document.querySelector(".meetingIdTxt")
@@ -19,7 +19,9 @@ dialog.addEventListener("click",()=>{
 form.addEventListener("click",(e)=>{
   e.stopPropagation()
 })
-conference.addEventListener("click",showModal)
+conference.forEach((button)=>{
+  button.addEventListener("click",showModal)
+})
 
 // Join Meeting Button Event Listener
 joinButton.addEventListener("click", joinMeeting);
